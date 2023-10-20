@@ -6,7 +6,7 @@
 /*   By: dpalmer <dpalmer@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 07:46:29 by dpalmer           #+#    #+#             */
-/*   Updated: 2023/10/20 07:47:52 by dpalmer          ###   ########.fr       */
+/*   Updated: 2023/10/20 10:47:13 by dpalmer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ WrongCat::~WrongCat()
 	std::cout << "WrongCat Deconstructor called" << std::endl;
 }
 
-// Overloaded Operators
+// Overload Operators
 WrongCat &WrongCat::operator=(const WrongCat &src)
 {
 	std::cout << "WrongCat Copy Assignment operator called" << std::endl;

@@ -6,7 +6,7 @@
 /*   By: dpalmer <dpalmer@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 07:45:43 by dpalmer           #+#    #+#             */
-/*   Updated: 2023/10/20 08:04:08 by dpalmer          ###   ########.fr       */
+/*   Updated: 2023/10/20 10:47:13 by dpalmer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ WrongAnimal::~WrongAnimal()
 	std::cout << "WrongAnimal Deconstructor called" << std::endl;
 }
 
-// Overloaded Operators
+// Overload Operators
 WrongAnimal &WrongAnimal::operator=(const WrongAnimal &src)
 {
 	std::cout << "WrongAnimal Copy Assignment operator called" << std::endl;

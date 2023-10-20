@@ -6,7 +6,7 @@
 /*   By: dpalmer <dpalmer@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 10:14:03 by dpalmer           #+#    #+#             */
-/*   Updated: 2023/10/20 09:14:34 by dpalmer          ###   ########.fr       */
+/*   Updated: 2023/10/20 10:47:13 by dpalmer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ Brain::~Brain()
 	std::cout << "Brain Deconstructor called" << std::endl;
 }
 
-// Overloaded Operators
+// Overload Operators
 Brain &Brain::operator=(const Brain &src)
 {
 	std::cout << "Brain Copy Assignment operator called" << std::endl;

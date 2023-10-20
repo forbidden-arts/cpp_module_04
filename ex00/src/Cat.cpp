@@ -6,7 +6,7 @@
 /*   By: dpalmer <dpalmer@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 07:42:49 by dpalmer           #+#    #+#             */
-/*   Updated: 2023/10/20 07:44:18 by dpalmer          ###   ########.fr       */
+/*   Updated: 2023/10/20 10:47:13 by dpalmer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ Cat::~Cat()
 	std::cout << "Cat Deconstructor called" << std::endl;
 }
 
-// Overloaded Operators
+// Overload Operators
 Cat &Cat::operator=(const Cat &src)
 {
 	std::cout << "Cat Copy Assignment operator called" << std::endl;

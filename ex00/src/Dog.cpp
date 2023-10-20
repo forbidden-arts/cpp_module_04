@@ -6,7 +6,7 @@
 /*   By: dpalmer <dpalmer@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 07:44:29 by dpalmer           #+#    #+#             */
-/*   Updated: 2023/10/20 07:45:36 by dpalmer          ###   ########.fr       */
+/*   Updated: 2023/10/20 10:47:13 by dpalmer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ Dog::~Dog()
 	std::cout << "Dog Deconstructor called" << std::endl;
 }
 
-// Overloaded Operators
+// Overload Operators
 Dog &Dog::operator=(const Dog &src)
 {
 	std::cout << "Dog Assignation operator called" << std::endl;
