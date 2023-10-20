@@ -6,7 +6,7 @@
 /*   By: dpalmer <dpalmer@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 10:14:03 by dpalmer           #+#    #+#             */
-/*   Updated: 2023/10/20 08:56:32 by dpalmer          ###   ########.fr       */
+/*   Updated: 2023/10/20 09:14:25 by dpalmer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ const std::string	Brain::getIdea(size_t i)const
 	if (i < 100)
 		return(this->_ideas[i]);
 	else
-		return ("\033[33mNot enough ideas in brain.\033[0m");
+		return ("Not enough ideas in brain.");
 }
 
 const std::string *Brain::getIdeaAddress(size_t i)const
