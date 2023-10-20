@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpalmer <dpalmer@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/19 08:34:32 by dpalmer           #+#    #+#             */
-/*   Updated: 2023/10/20 09:02:41 by dpalmer          ###   ########.fr       */
+/*   Created: 2023/10/19 10:12:49 by dpalmer           #+#    #+#             */
+/*   Updated: 2023/10/20 08:21:06 by dpalmer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,20 +15,22 @@
 #include <string>
 #include <iostream>
 
-class WrongAnimal
+
+class Brain
 {
-	protected:
-		std::string _type;
+	private:
+		std::string _ideas[100];
 
 	public:
 	// Constructors
-		WrongAnimal();
-		WrongAnimal(const WrongAnimal &copy);
-		WrongAnimal &operator=(const WrongAnimal &src);
+		Brain();
+		Brain(const Brain &copy);
+		Brain &operator=(const Brain &src);
 	// Deconstructors
-		~WrongAnimal();
-	// Public Methods
-		void makeSound(void)const;
+		virtual ~Brain();
 	// Getter
-		std::string getType(void)const;
+		const std::string getIdea(size_t i)const;
+		const std::string *getIdeaAddress(size_t i)const;
+	// Setter
+		void setIdea(size_t i, std::string idea);
 };

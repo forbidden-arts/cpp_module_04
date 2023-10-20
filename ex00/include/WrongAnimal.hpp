@@ -6,7 +6,7 @@
 /*   By: dpalmer <dpalmer@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 08:34:32 by dpalmer           #+#    #+#             */
-/*   Updated: 2023/10/20 07:39:28 by dpalmer          ###   ########.fr       */
+/*   Updated: 2023/10/20 09:02:47 by dpalmer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ class WrongAnimal
 {
 	protected:
 		std::string _type;
+
 	public:
 	// Constructors
 		WrongAnimal();

@@ -1,34 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpalmer <dpalmer@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/19 08:34:32 by dpalmer           #+#    #+#             */
-/*   Updated: 2023/10/20 09:02:41 by dpalmer          ###   ########.fr       */
+/*   Created: 2023/10/19 10:34:26 by dpalmer           #+#    #+#             */
+/*   Updated: 2023/10/20 08:22:19 by dpalmer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include <string>
-#include <iostream>
+#include "Animal.hpp"
+#include "Brain.hpp"
 
-class WrongAnimal
+
+class Cat: public Animal
 {
-	protected:
-		std::string _type;
+	private:
+		Brain *_brain;
 
 	public:
 	// Constructors
-		WrongAnimal();
-		WrongAnimal(const WrongAnimal &copy);
-		WrongAnimal &operator=(const WrongAnimal &src);
+		Cat();
+		Cat(const Cat &copy);
+		Cat &operator=(const Cat &src);
 	// Deconstructors
-		~WrongAnimal();
+		~Cat();
 	// Public Methods
 		void makeSound(void)const;
 	// Getter
-		std::string getType(void)const;
+		void getIdeas(void)const;
+	// Setter
+		void setIdea(size_t i, std::string idea);
 };

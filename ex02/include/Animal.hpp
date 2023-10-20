@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpalmer <dpalmer@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/19 08:34:32 by dpalmer           #+#    #+#             */
-/*   Updated: 2023/10/20 09:02:41 by dpalmer          ###   ########.fr       */
+/*   Created: 2023/10/19 07:29:24 by dpalmer           #+#    #+#             */
+/*   Updated: 2023/10/20 09:00:43 by dpalmer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,20 +15,21 @@
 #include <string>
 #include <iostream>
 
-class WrongAnimal
+
+class Animal
 {
 	protected:
 		std::string _type;
+		Animal();
 
 	public:
 	// Constructors
-		WrongAnimal();
-		WrongAnimal(const WrongAnimal &copy);
-		WrongAnimal &operator=(const WrongAnimal &src);
+		Animal(const Animal &copy);
+		Animal &operator=(const Animal &src);
 	// Deconstructors
-		~WrongAnimal();
+		virtual ~Animal();
 	// Public Methods
-		void makeSound(void)const;
+		virtual void makeSound(void)const = 0;
 	// Getter
 		std::string getType(void)const;
 };
