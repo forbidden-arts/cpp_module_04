@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpalmer <dpalmer@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/19 07:29:24 by dpalmer           #+#    #+#             */
-/*   Updated: 2023/10/20 08:20:40 by dpalmer          ###   ########.fr       */
+/*   Created: 2023/10/19 10:12:49 by dpalmer           #+#    #+#             */
+/*   Updated: 2023/10/20 08:21:06 by dpalmer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,20 +16,21 @@
 #include <iostream>
 
 
-class Animal
+class Brain
 {
-	protected:
-		std::string _type;
+	private:
+		std::string _ideas[100];
 
 	public:
 	// Constructors
-		Animal();
-		Animal(const Animal &copy);
-		Animal &operator=(const Animal &src);
+		Brain();
+		Brain(const Brain &copy);
+		Brain &operator=(const Brain &src);
 	// Deconstructors
-		virtual ~Animal();
-	// Public Methods
-		virtual void makeSound(void)const;
+		virtual ~Brain();
 	// Getter
-		std::string getType(void)const;
+		const std::string getIdea(size_t i)const;
+		const std::string *getIdeaAddress(size_t i)const;
+	// Setter
+		void setIdea(size_t i, std::string idea);
 };

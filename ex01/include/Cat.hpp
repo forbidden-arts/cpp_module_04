@@ -1,35 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpalmer <dpalmer@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/19 07:29:24 by dpalmer           #+#    #+#             */
-/*   Updated: 2023/10/20 08:20:40 by dpalmer          ###   ########.fr       */
+/*   Created: 2023/10/19 10:34:26 by dpalmer           #+#    #+#             */
+/*   Updated: 2023/10/20 08:22:19 by dpalmer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include <string>
-#include <iostream>
+#include "Animal.hpp"
+#include "Brain.hpp"
 
 
-class Animal
+class Cat: public Animal
 {
-	protected:
-		std::string _type;
+	private:
+		Brain *_brain;
 
 	public:
 	// Constructors
-		Animal();
-		Animal(const Animal &copy);
-		Animal &operator=(const Animal &src);
+		Cat();
+		Cat(const Cat &copy);
+		Cat &operator=(const Cat &src);
 	// Deconstructors
-		virtual ~Animal();
+		~Cat();
 	// Public Methods
-		virtual void makeSound(void)const;
+		void makeSound(void)const;
 	// Getter
-		std::string getType(void)const;
+		void getIdeas(void)const;
+	// Setter
+		void setIdea(size_t i, std::string idea);
 };

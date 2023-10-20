@@ -6,7 +6,7 @@
 /*   By: dpalmer <dpalmer@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 10:34:26 by dpalmer           #+#    #+#             */
-/*   Updated: 2023/10/20 07:38:04 by dpalmer          ###   ########.fr       */
+/*   Updated: 2023/10/20 08:19:53 by dpalmer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 class Cat: public Animal
 {
 	private:
-		// Private Members
 
 	public:
 	// Constructors

@@ -1,35 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpalmer <dpalmer@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/19 07:29:24 by dpalmer           #+#    #+#             */
-/*   Updated: 2023/10/20 08:20:40 by dpalmer          ###   ########.fr       */
+/*   Created: 2023/10/19 10:45:30 by dpalmer           #+#    #+#             */
+/*   Updated: 2023/10/20 08:23:02 by dpalmer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include <string>
-#include <iostream>
+#include "Animal.hpp"
+#include "Brain.hpp"
 
 
-class Animal
+class Dog: public Animal
 {
-	protected:
-		std::string _type;
+	private:
+		Brain *_brain;
 
 	public:
 	// Constructors
-		Animal();
-		Animal(const Animal &copy);
-		Animal &operator=(const Animal &src);
+		Dog();
+		Dog(const Dog &copy);
+		Dog &operator=(const Dog &src);
 	// Deconstructors
-		virtual ~Animal();
+		~Dog();
+
 	// Public Methods
-		virtual void makeSound(void)const;
+		void makeSound(void)const;
 	// Getter
-		std::string getType(void)const;
+		void getIdeas(void)const;
+	// Setter
+		void setIdea(size_t i, std::string idea);
 };
